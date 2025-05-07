@@ -20,7 +20,7 @@ import FolderTable from "./folder-table";
 import DocumentCard from "./document-card";
 import DocumentTable from "./document-table";
 import { DialogAddFolder } from "@/views/dashboard/dialogs/dialog-add-folder";
-import DialogViewDocument from "@/views/dashboard/dialogs/dialog-view-document";
+import DocumentDrawerViewer from "@/components/document-drawer-viewer";
 
 const DriveView = () => {
   const { data: session } = useSession();
@@ -214,8 +214,8 @@ const DriveView = () => {
       {/* Create Folder Dialog */}
       <DialogAddFolder />
 
-      {/* View Document Dialog */}
-      <DialogViewDocument
+      {/* View Document Drawer */}
+      <DocumentDrawerViewer
         isOpen={isViewDialogOpen}
         onClose={() => setIsViewDialogOpen(false)}
         document={selectedDocument}
